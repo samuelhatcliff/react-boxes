@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import './box.css';
 
 const Box = ({id, color, height, width, removeBox}) => {
+    function remove () {
+        removeBox(id)
+    }
     return (
         <div>
         <div 
@@ -13,7 +16,7 @@ const Box = ({id, color, height, width, removeBox}) => {
         >
         </div>
         
-        <button onclick= {removeBox(id)}>X</button>
+        <button onClick= {remove}>X</button>
         </div>
       
     )
